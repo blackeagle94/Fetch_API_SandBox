@@ -47,7 +47,7 @@ const getPosts = () => {
 
         for (let i = 0; i < data.length; i++) {
             output.innerHTML += `
-            <div class="card card-body">
+            <div class="card card-body mb-2">
             <h3>${data[i].title}</h3>
             <p>${data[i].body}</p>
             </div>
