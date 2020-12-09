@@ -74,7 +74,7 @@ const addPosts = (e) => {
 
     const postRequest = {
         method: 'POST',
-        body: JSON.stringify({ title:title, body:'body' }),
+        body: JSON.stringify({ title:title, body:body }),
 
         headers: {
             'Content-Type': 'application/json'
@@ -88,6 +88,13 @@ const addPosts = (e) => {
     })
     .catch(err => console.log(err))
 
+    let output = document.getElementById('output')
+    output.innerHTML += `
+    <div class="card card-body mb-2">
+    <h3>${title}</h3>
+    <p>${body}</p>
+    </div>
+    `
 }
 
 getText.addEventListener('click', getTexts)
